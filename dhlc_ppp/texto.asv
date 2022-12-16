@@ -1,0 +1,23 @@
+clc;
+clear all;
+
+
+lines = readlines("texto.txt");
+
+[m,n]= size(lines);
+
+
+
+for i=1:m
+x = lines(i,1);
+x = convertStringsToChars(x);
+b(i,:)=x;
+x =0;
+end
+
+
+unicodeValues = double(b);
+% 
+% w = 64;
+% w1 = dec2bin(unicodeValues)
+% w2= dec2bin(w)
