@@ -34,7 +34,7 @@ for i=1:m
     
             if contador==5
             valor = '0';
-            x = [x(1:j-1),valor,x(j:end)]
+            x = [x(1:j),valor,x(j+1:end)]
             contador =0;
             end
     end
@@ -44,7 +44,7 @@ end
 
 %% Agregar las flags
 
-flag =  string(01110)
+flag =  string('01110')
 [m,n] =size(z);
 hdlc_cod= [flag z(1,1)];
 hdlc_cod = [hdlc_cod flag];

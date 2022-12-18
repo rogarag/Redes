@@ -1,7 +1,7 @@
 clear all;
 clc;
 flag = string('01110');
-hdlc_cod =["01110"	"111110111110"	"01110" "010111110" "01110"];
+hdlc_cod =["01110"	"111110111110"	"01110" "0"];
 contador =0;
 contador1 =0;
 contador2 =0;
@@ -38,20 +38,17 @@ x = convertStringsToChars(x);
        j=1;
     while j<n % este for cuenta los caracteres
         x(j)
-        if (x(1,j)=='1') 
+        if x(1,j)=='1'
              contador1=contador1+1;   
-        elseif x(1,j) =='0'
-            contador1 = 0;
         end
-       if (contador1 == 5) && (x(1,j+1)=='0')
+       if (contador1 == 5) && (x(i,j+1)=='0')
             x(j+1) = []
             n =n-1
             contador1 = 0;
        end
     j=j+1
     end
-y = convertCharsToStrings(x)   
-     z(i,1)=y;%es la mtriz final
+
   
 
 end 
