@@ -14,18 +14,28 @@ f=0;
 %%
 q=0;
 for i=1:m
+    q=0;
 x = lines(i,:);
 x = convertStringsToChars(x);
-[~,n]=size(x);
+n =0;
+[m,n]=size(x);
     for j=1:n
         
-        x(i,j)
-       if  x(i,j)== '@'
+       x(1,j)
+       x(i,j+1)
+       %estas seran las condiconales
+      % if (x(1,j)=='@') && (x(1,j)=='/')
+
+       if  x(1,j)== '@' %si en el texto existe una flag
+       vect1 = [x(1:j-1),esc,x(j:end)]
+       elseif x(1,j)== '/'% si existe esc
        vect1 = [x(1:j-1),esc,x(j:end)]
        end
-       
+
+   
     end
-         
+      y = convertCharsToStrings(vect1)   
+      z(i,1)=y;
  end
 
 % for i =2:m
