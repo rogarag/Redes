@@ -1,17 +1,18 @@
  clc;
 clear all;
-%%variables
+
+%% variables
 flag ='@';
 esc='/';
 esc2='//';
 contador =0;
 
-%%
+%% Se lee el el archivo txt 
 lines = readlines("texto_char.txt");
 [m,n]=size(lines);
 f=0;
 
-%%
+%% Se toman las condicionales para agregar las flags o los esc
 q=0;
 for i=1:m
     q=0;
