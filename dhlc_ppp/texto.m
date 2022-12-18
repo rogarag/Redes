@@ -60,7 +60,7 @@ end
 
 end
 
-%[hdlc1, aux1] = hdlc(b)
+
 
 
 

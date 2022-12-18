@@ -1,9 +1,9 @@
-clc;
+ clc;
 clear all;
 %%variables
 flag ='@';
 esc='/';
-vec1=[];
+esc2='//';
 contador =0;
 
 %%
@@ -20,68 +20,40 @@ x = convertStringsToChars(x);
 n =0;
 [m,n]=size(x);
     for j=1:n
-        
+       
        x(1,j)
-       x(i,j+1)
-       %estas seran las condiconales
-      % if (x(1,j)=='@') && (x(1,j)=='/')
+      
+%       %estas seran las condiconales
+%            
+        if (j<n)&& (x(1,j)== esc) && (x(1,j+1)==flag)
+            vect1 = [x(1:j-1),esc2,x(j:end)];
 
-       if  x(1,j)== '@' %si en el texto existe una flag
-       vect1 = [x(1:j-1),esc,x(j:end)]
-       elseif x(1,j)== '/'% si existe esc
-       vect1 = [x(1:j-1),esc,x(j:end)]
-       end
+        elseif (j<n)&& (x(1,j)== esc) && (x(1,j+1)==esc)
+            vect1 = [x(1:j-1),esc2,x(j:end)];
+            
+        elseif  (x(1,j)== flag) && (x(1,j-1)~= esc) %si en el texto existe una flag
+            vect1 = [x(1:j-1),esc,x(j:end)];
 
+       elseif x(1,j)== esc && (x(1,j-1) ~= esc)% si existe esc
+            vect1 = [x(1:j-1),esc,x(j:end)];      
+        end
    
     end
       y = convertCharsToStrings(vect1)   
-      z(i,1)=y;
- end
-
-% for i =2:m
-% x = lines(i,:);
-% x = convertStringsToChars(x);
-% [~,n]= size(x)
-%        
-% vec1 = [vec1 x];
-% vec1 = [vec1 flag];
-% x = 0;
-% end
-% vec1
+      z(i,1)=y;%es la mtriz final
+end
 
 
-% for i=1:m
-%     
-%    A= lines(i,:);
-%     v = genvarname(['x',num2str(i)]);
-%    eval([v,'= x']);
-%     x=0;
-% end
+%% Agregar las flags
 
+[m,n] =size(z);
+ppp_cod= [flag z(1,1)];
+ppp_cod = [ppp_cod flag];
 
+for j =2:m
 
+   ppp_cod= [ppp_cod z(j,1) ];
+   ppp_cod =[ppp_cod flag];
+end
 
-% % este for convierte los elementos string a elemenots Char
-% for i=1:m
-% x = lines(i,1);
-% x = convertStringsToChars(x);
-% b(i,:)=x;
-% x =0;
-% end
-
-% str  = ["a","b","c","Q","W","e","q","w","o","d","p","c","s","c","s","c","k","c"];
-% str2 = [];
-% x = length(str);
-%  for i=1:x
-% 
-%     if str(1,i)=="-"
-%       
-%     elseif str(1,i)=="."
-% 
-%     end
-%    
-%  end
-% flag = "-";
-% 
-% str = [flag str];
-% str = [str flag];
+ppp_cod
