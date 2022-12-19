@@ -1,6 +1,7 @@
-clear all;
-clc;
-hdlc_cod =["01110"	"111110111110"	"01110" "010111110" "01110" "011100110" "01110"];
+% clear all;
+% clc;
+% hdlc_cod =["01110"	"111110111110"	"01110" "010111110" "01110" "011100110" "01110"];
+function z = hdlcDecod(hdlc_cod)
 flag = string('01110');
 contador =0;
 contador1 =0;
@@ -18,12 +19,12 @@ hdlc_cod =[hdlc_cod(1:n-1),[]];
 i=1; 
 hdlc_cod
 while i<n 
-    hdlc_cod(1,i)
+    hdlc_cod(1,i);
     if hdlc_cod(1,i) == flag
-    hdlc_cod(i) = []
-    n =n-1
+    hdlc_cod(i) = [];
+    n =n-1;
     end
-    i=i+1
+    i=i+1;
 
 end
 
@@ -37,22 +38,23 @@ x = convertStringsToChars(x);
 [~,n]= size(x);
        j=1;
     while j<n % este for cuenta los caracteres
-        x(j)
+        x(j);
         if (x(1,j)=='1') 
              contador1=contador1+1;   
         elseif x(1,j) =='0'
             contador1 = 0;
         end
        if (contador1 == 5) && (x(1,j+1)=='0')
-            x(j+1) = []
-            n =n-1
+            x(j+1) = [];
+            n =n-1;
             contador1 = 0;
        end
-    j=j+1
+    j=j+1;
     end
-y = convertCharsToStrings(x)   
+y = convertCharsToStrings(x);   
      z(i,1)=y;%es la mtriz final
   
  
 end 
 
+end

@@ -20,7 +20,7 @@ lines = readlines("texto_bin.txt");
 contador = 0;
 for i=1:m
 
-    x = lines(i,:)
+    x = lines(i,:);
     x = convertStringsToChars(x);
   
     [~,n]=size(x);
@@ -34,17 +34,17 @@ for i=1:m
     
             if contador==5
             valor = '0';
-            x = [x(1:j),valor,x(j+1:end)]
+            x = [x(1:j),valor,x(j+1:end)];
             contador =0;
             end
     end
-     y = convertCharsToStrings(x)   
+     y = convertCharsToStrings(x);
      z(i,1)=y;%es la mtriz final
 end
 
 %% Agregar las flags
 
-flag =  string('01110')
+flag =  string('01110');
 [m,n] =size(z);
 hdlc_cod= [flag z(1,1)];
 hdlc_cod = [hdlc_cod flag];
@@ -57,7 +57,7 @@ end
 
 hdlc_cod
 
-
+z = hdlcDecod(hdlc_cod) 
 
 
 %%
