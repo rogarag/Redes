@@ -22,7 +22,7 @@ n =0;
 [m,n]=size(x);
     for j=1:n
        
-       x(1,j);
+       x(1,j)
       
 %       %estas seran las condiconales
 %            
@@ -36,11 +36,11 @@ n =0;
             x = [x(1:j-1),esc,x(j:end)];
 
        elseif x(1,j)== esc && (x(1,j-1) ~= esc)% si existe esc
-            x = [x(1:j-1),esc,x(j:end)];      
+            vect1 = [x(1:j-1),esc,x(j:end)];      
         end
    
     end
-      y = convertCharsToStrings(x);
+      y = convertCharsToStrings(vect1)   
       z(i,1)=y;%es la mtriz final
 end
 
@@ -57,6 +57,4 @@ for j =2:m
    ppp_cod =[ppp_cod flag];
 end
 
-matrizFinal=ppp_decod(ppp_cod)
-T =table(matrizFinal);
-writetable(T,'text_char_decod.txt');
+ppp_cod

@@ -1,6 +1,7 @@
-clear all;
-clc;
-hdlc_cod =["01110"	"111110111110"	"01110" "010111110" "01110" "011100110" "01110"];
+function z = hdlcDecod(hdlc_cod)
+% clear all;
+% clc;
+% hdlc_cod =["01110"	"111110111110"	"01110" "010111110" "01110" "011100110" "01110"];
 flag = string('01110');
 contador =0;
 contador1 =0;
@@ -56,3 +57,5 @@ y = convertCharsToStrings(x)
  
 end 
 
+
+end
