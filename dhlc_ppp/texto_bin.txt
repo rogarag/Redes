@@ -1,4 +1,8 @@
 11111111
+<<<<<<< HEAD
 00000000
 01001010
 1111000
+=======
+000000000000
+>>>>>>> parent of 02777c1 (convertir characteres a binario)

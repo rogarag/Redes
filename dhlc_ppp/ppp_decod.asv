@@ -1,4 +1,4 @@
-function matrizFinal = ppp_decod(ppp_cod)
+function 
 % clear all;
 % clc;
 % ppp_cod =["@"    "h////ola"    "@"   "t///@r" "@" "Karlos/@" "@"   ];
@@ -43,11 +43,11 @@ x = convertStringsToChars(x);
        j=1;
     while j<n % este for cuenta los caracteres
         x(j)
-        if (x(1,j)== esc) && (x(1,j+1)==flag)
+        if (x(1,j)=='/') && (x(1,j+1)=='@')
                x(j) = []
                 n =n-1
                 
-        elseif (x(1,j)==esc) && (x(1,j+1)==esc)
+        elseif (x(1,j)=='/') && (x(1,j+1)=='/')
             x(j) = []
                n =n-1
                contador =contador +1
@@ -64,4 +64,4 @@ y = convertCharsToStrings(x)
 end 
 
 %% quitar los demas 
-end
+
