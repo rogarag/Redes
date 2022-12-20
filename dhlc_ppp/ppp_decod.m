@@ -2,8 +2,8 @@ function matrizFinal = ppp_decod(ppp_cod)
 % clear all;
 % clc;
 % ppp_cod =["@"    "h////ola"    "@"   "t///@r" "@" "Karlos/@" "@"   ];
-flag = string('@');
-esc= '/';
+flag = string('.');
+esc= '-';
 % 
 contador =0;
 contador1 =0;

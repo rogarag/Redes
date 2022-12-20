@@ -2,9 +2,9 @@
 clear all;
 
 %% variables
-flag ='@';
-esc='/';
-esc2='//';
+flag ='.';
+esc='-';
+esc2='--';
 contador =0;
 
 %% Se lee el el archivo txt 
