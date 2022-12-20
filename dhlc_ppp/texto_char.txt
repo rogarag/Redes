@@ -1,3 +1,3 @@
-h/ola
-twitter//
-marco@
+How do HDLC-frames work.
+HDLC-frames can be transmitted over either. 
+Asynchronous or synchronous communication links

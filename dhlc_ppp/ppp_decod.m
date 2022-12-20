@@ -1,8 +1,8 @@
-function matrizFinal = ppp_decod(ppp_cod)
-% clear all;
-% clc;
-% ppp_cod =["@"    "h////ola"    "@"   "t///@r" "@" "Karlos/@" "@"   ];
-flag = string('@');
+%function matrizFinal = ppp_decod(ppp_cod)
+clear all;
+clc;
+ppp_cod =["."	"How do HDLC--frames work."	"."	"HDLC--frames can be transmitted over either-. "	"."	"Asynchronous or synchronous communication links"	"."  ];
+flag = string('.');
 esc= '/';
 % 
 contador =0;
@@ -59,9 +59,10 @@ x = convertStringsToChars(x);
     end
 y = convertCharsToStrings(x)   
    matrizFinal(i,1)=y;%es la mtriz final
-  
- 
+
 end 
 
+
+%end
+
 %% quitar los demas 
-end

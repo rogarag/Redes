@@ -1,0 +1,2 @@
+ppp_cod_1,ppp_cod_2,ppp_cod_3,ppp_cod_4,ppp_cod_5,ppp_cod_6,ppp_cod_7
+.,How do HDLC--frames work.,.,HDLC--frames can be transmitted over either-. ,.,Asynchronous or synchronous communication links,.

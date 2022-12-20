@@ -2,9 +2,9 @@
 clear all;
 
 %% variables
-flag ='@';
-esc='/';
-esc2='//';
+flag ='.';
+esc='-';
+esc2='--';
 contador =0;
 
 %% Se lee el el archivo txt 
@@ -19,8 +19,9 @@ for i=1:m
 x = lines(i,:);
 x = convertStringsToChars(x);
 n =0;
-[m,n]=size(x);
-    for j=1:n
+[~,n]=size(x);
+    j=1;
+    while j<=n
        
        x(1,j);
       
@@ -28,9 +29,10 @@ n =0;
 %            
         if (j<n)&& (x(1,j)== esc) && (x(1,j+1)==flag)
             x = [x(1:j-1),esc2,x(j:end)];
-
+            j=j+2;
         elseif (j<n)&& (x(1,j)== esc) && (x(1,j+1)==esc)
             x = [x(1:j-1),esc2,x(j:end)];
+                j=j+2;
             
         elseif  (x(1,j)== flag) && (x(1,j-1)~= esc) %si en el texto existe una flag
             x = [x(1:j-1),esc,x(j:end)];
@@ -38,6 +40,7 @@ n =0;
        elseif x(1,j)== esc && (x(1,j-1) ~= esc)% si existe esc
             x = [x(1:j-1),esc,x(j:end)];      
         end
+      j=j+1;
    
     end
       y = convertCharsToStrings(x);
@@ -57,6 +60,9 @@ for j =2:m
    ppp_cod =[ppp_cod flag];
 end
 
-matrizFinal=ppp_decod(ppp_cod)
-T =table(matrizFinal);
-writetable(T,'text_char_decod.txt');
+table_ppp =table(ppp_cod);
+writetable(table_ppp,'text_char_cod.txt');
+
+% matrizFinal = ppp_decod(ppp_cod);
+% table_ppp1 =table(matrizFinal);
+% writetable(table_ppp1,'text_char_decod.txt');
