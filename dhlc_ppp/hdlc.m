@@ -42,7 +42,7 @@ for i=1:m
      z(i,1)=y;%es la mtriz final
 end
 
-%% Agregar las flags
+%% Agregar las flags de las tramas
 
 flag =  string('01110');
 [m,n] =size(z);

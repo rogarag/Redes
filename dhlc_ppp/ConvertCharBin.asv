@@ -90,7 +90,6 @@ contador = 0;
     x = matrizFlag(1,:);
     [~,n]=size(x);
 
-
     for j=1:n
         d = convertStringsToChars(x(1,j))
         [~,f]= size(d)
@@ -99,7 +98,7 @@ contador = 0;
               
                 if d(i)=='1'
                     contador = contador +1; 
-                elseif d(i)=='0' | d(i)=='@'
+                elseif d(i)=='0' && d(i)=='@'
                     contador =0;
                 end
             
@@ -109,10 +108,9 @@ contador = 0;
                     contador =0;
                     end
         end
-         y = convertCharsToStrings(d);
-        vectorFinal(1,j)=y;%es la mtriz final
     end
-    
+%      y = convertCharsToStrings(x);
+%      z(i,1)=y;%es la mtriz final
 
 
 
