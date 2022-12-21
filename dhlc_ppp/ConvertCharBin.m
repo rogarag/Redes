@@ -51,7 +51,7 @@ for i=1:m
    end
    
 end
-%% Se crean una matriz de m x 1
+%% Se crean un vector de m x 1
 
 [m,n] = size(w);
 
@@ -59,10 +59,10 @@ for i=1:m
     
     b = w (i,:);
     
-    b1 = strcat(w(1),w(2));
+    b1 = strcat(b(1),b(2));
     j=3;
     while j<=n
-       b1 = strcat(b1,w(j));
+       b1 = strcat(b1,b(j));
        j = j+1;
     end
 matrizb(i,1) = b1;
@@ -82,7 +82,7 @@ for j =2:m
 end
 
 matrizFlag;
-
+qwer =0;
 
 %% Procederemos a meter el cero a la trama (experimental)
 contador = 0;
@@ -110,10 +110,10 @@ contador = 0;
                     end
         end
          y = convertCharsToStrings(d);
-        vectorFinal(1,j)=y;%es la mtriz final
+        hdlc_cod(1,j)=y;%es la mtriz final
     end
     
 
-
+[matrizDec,var, matrizChar] = hdlcDecod(hdlc_cod);
 
 
