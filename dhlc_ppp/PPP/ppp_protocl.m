@@ -63,6 +63,7 @@ end
 table_ppp =table(ppp_cod);
 writetable(table_ppp,'text_char_cod.txt');
 
+%% Se manda a llamar la función
  matrizFinal = ppp_decod(ppp_cod);
 
  table_ppp1 =table(matrizFinal);

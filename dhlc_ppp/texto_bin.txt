@@ -1,3 +1,0 @@
-How do HDLC-frames work.
-HDLC-frames can be trans
-mitted over either. Asyn
