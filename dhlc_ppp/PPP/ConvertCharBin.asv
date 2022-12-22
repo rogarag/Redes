@@ -113,7 +113,9 @@ contador = 0;
         hdlc_cod(1,j)=y;%es la mtriz final
     end
     
-
-[matrizDec,var, matrizChar] = hdlcDecod(hdlc_cod);
+%% manda a llamar la función de decodificación
+[matrizChar] = hdlcDecod(hdlc_cod);
+ table_ppp1 =table(matrizChar);
+writetable(table_ppp1,'text_cha_decod.txt');
 
 
