@@ -1,4 +1,5 @@
-How do HDLC-frames work2.
+matrizFinal
+How do HDLC-frames work22.
 HDLC-frames can be transmitted over either. 
 Asynchronous or synchronous communication links
 Synchronous framing. In synchronous frames data 

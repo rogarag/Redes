@@ -60,7 +60,7 @@ for i=1:m
     b = w (i,:);
     
     b1 = strcat(b(1),b(2));
-    j=3;
+    j=3;% el tres, ya se usaron las dos posiciones anteriores
     while j<=n
        b1 = strcat(b1,b(j));
        j = j+1;
