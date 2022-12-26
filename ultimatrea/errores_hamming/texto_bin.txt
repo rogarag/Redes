@@ -1,0 +1,2 @@
+How do HDLC-frames work.
+HDLC-frames can be trans
