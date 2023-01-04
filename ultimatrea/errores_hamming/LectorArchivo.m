@@ -6,7 +6,7 @@ lines = readlines("texto_bin.txt");
 [m,~]= size(lines);
 
 %% convertir string a char, para poder leer unoxuno los caracteres 
-for i=1:m
+for i=1:50
 
     aux = lines(i,:);
     aux2 = convertStringsToChars(aux);
