@@ -1,0 +1,36 @@
+clear;
+clc;
+close all;
+
+Fs = 1000;            % Sampling frequency                    
+T = 1/Fs;             % Sampling period       
+L = 1500;             % Length of signal
+t = (0:L-1)*T;        % vector de tiempo
+ m =0.5;              %indice d emodulación
+
+ %Señal moduladora (e sla que lleva los datos)
+ Fmod = 3; %frecuncia de señal mppduladora
+Amod = 5;%amplitud de ña señal moduladora
+s_mod = Amod*sin(2*pi*Fmod.*t);
+subplot(3,1,1)
+plot(t,s_mod)
+title('señal moduladora')
+
+%señal portadora
+Apor = (Amod)/m;%amplitud de la señal portadora
+Fpor= 150;
+s_por = 9*cos(2*pi*Fpor.*t);
+subplot(3,1,2)
+plot(t,s_por)
+title('Señal portadora')
+
+
+
+%%%Modulacion 
+s_mod = (Apor+ s_mod).* cos(2*pi*Fpor.*t);
+
+
+subplot(3,1,3)
+plot(t,s_mod)
+title('Señal Modulada')
+
