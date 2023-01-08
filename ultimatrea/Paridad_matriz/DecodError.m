@@ -1,6 +1,6 @@
 %esta función decodifica la trama matriz paridad 23esta función decodifica la trama matriz paridad
 
-function [cero1DecodError,matrizParidadAbajoDecodError,matrizbError,matrizParidadDecodError] = DecodError(x)
+function [cero1DecodError,matrizParidadAbajoDecodError, matrizaError,matrizParidadDecodError] = DecodError(x)
 
 lines = readlines("Trama_CodError.txt");
 vector=lines(1,:);% devido a que en el archivo nos mete un renglon de más, solo ocuparemos i-1
@@ -39,7 +39,7 @@ qre=0;
         contador = contador - 1;
         aux=vectorChar(contador1:contador);
 
-        matriza(contadorColum,:) = aux;
+        matrizaError(contadorColum,:) = aux;
         contador1 = contador +2;
         contador = contador + 1;
 
@@ -48,10 +48,10 @@ end
 
 %Se parten en 7 para poder acomodar 7 bits en cad casilla
 
-[m,n] = size(matriza);
+[m,n] = size(matrizaError);
 contador0 =0;
 for i=1:m
-F = matriza(i,:);
+F = matrizaError(i,:);
     [~,n] = size(F);
     x1= n/7;
     y1=1;

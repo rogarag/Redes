@@ -1,0 +1,14 @@
+% coidgos d elínea
+
+h=[1 0 0 1 1 0 1 0 1 0];
+
+figure
+ UNRZ(h)
+ 
+
+ URZ(h)
+
+ AMIRZ(h)
+ 
+ MANCHESTER(h)
+  
