@@ -64,6 +64,6 @@ y = convertCharsToStrings(x)
 end 
 
 
-%end
+ end
 
 %% quitar los demas 

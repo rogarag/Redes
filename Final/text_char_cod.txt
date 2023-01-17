@@ -1,0 +1,2 @@
+ppp_cod_1,ppp_cod_2,ppp_cod_3,ppp_cod_4,ppp_cod_5
+.,es work-.,.,be trans,.
