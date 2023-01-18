@@ -1,4 +1,4 @@
-function  [matrizTramaschangue, matris2] = Error1(tramasBinario)
+function  [matrizTramaschangue, matris3] = Error1(tramasBinario)
 
 tramas =1; % posteriormente se tiene que cambiar, son las cantidad de tramas a cambiar
 
@@ -86,4 +86,13 @@ for i=1:m
 end
 m=0;
 
+%% se convierte a string
+[m,~]=size(matris2);
+for i=1:m
+aux = matris2(i,1:end);
+
+aux=convertCharsToStrings(aux);
+
+matris3(i,:) =aux;
+end
 end
