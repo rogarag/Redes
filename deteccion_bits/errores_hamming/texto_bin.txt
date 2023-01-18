@@ -1,1 +1,8 @@
 How do HDLC-frames work.
+HDLC-frames can be trans
+mitted over either. Asyn
+chronous or synchronous 
+communication links Sync
+hronous framing. In sync
+hronous frames data is N
+RZI non-return-to-zero i
