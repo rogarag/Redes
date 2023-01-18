@@ -1,6 +1,6 @@
 
 
-function ppp_cod = hdlc(matriztrama)
+function ppp_cod = ppp(matriztrama)
 %% variables
 flag ='@';
 esc='-';
